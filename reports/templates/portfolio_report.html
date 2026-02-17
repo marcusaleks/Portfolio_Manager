@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Portfólio</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 30px;
+            color: #333;
+            font-size: 11px;
+        }
+        h1 {
+            color: #0078D4;
+            border-bottom: 2px solid #0078D4;
+            padding-bottom: 6px;
+            font-size: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 14px;
+            margin-top: 24px;
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        th, td {
+            border: 1px solid #DDD;
+            padding: 5px 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #E0E0E0;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #F9F9F9;
+        }
+        .right { text-align: right; }
+        .profit { color: #009600; font-weight: bold; }
+        .loss { color: #C80000; font-weight: bold; }
+        .summary-box {
+            background: #F0F6FF;
+            border: 1px solid #B0D0FF;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+        }
+        .summary-box span {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 9px;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid #EEE;
+            padding-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>💰 Relatório de Portfólio</h1>
+    <p>Gerado em: {{ generated_at }}</p>
+
+    <div class="summary-box">
+        Patrimônio Total (Custo): <span>{{ total_cost }}</span> &nbsp;|&nbsp;
+        Posições Abertas: <span>{{ num_positions }}</span>
+    </div>
+
+    <h2>Posições</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Classe</th>
+                <th class="right">Quantidade</th>
+                <th class="right">PM</th>
+                <th class="right">Custo Total</th>
+                <th>Instituição</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in positions %}
+            <tr>
+                <td>{{ p.ticker }}</td>
+                <td>{{ p.asset_class }}</td>
+                <td class="right">{{ p.quantity }}</td>
+                <td class="right">{{ p.avg_price }}</td>
+                <td class="right">{{ p.total_cost }}</td>
+                <td>{{ p.institution }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if custodians %}
+    <h2>Custódia por Instituição</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Instituição</th>
+                <th>Ticker</th>
+                <th class="right">Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in custodians %}
+            <tr>
+                <td>{{ c.institution }}</td>
+                <td>{{ c.ticker }}</td>
+                <td class="right">{{ c.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    <div class="footer">
+        Portfolio Control System V3.1 — Gerado automaticamente
+    </div>
+</body>
+</html>

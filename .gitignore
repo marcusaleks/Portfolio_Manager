@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.spec
+*.egg-info/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# PyInstaller
+*.manifest
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+.venv/
+venv/
+
+# Temp files
+debug_check.py
+db_dump.json
+
+# Inno Setup output
+Output/
