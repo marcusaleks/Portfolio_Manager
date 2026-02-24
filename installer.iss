@@ -1,8 +1,8 @@
-; Inno Setup Script for Portfólio V.1.0
+; Inno Setup Script for Portfólio V.0.0.1
 ; Download Inno Setup from: https://jrsoftware.org/isdl.php
 
 #define MyAppName "Portfólio"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "0.0.1"
 #define MyAppPublisher "Marcus Aleks"
 #define MyAppURL "https://github.com/marcusaleks/portfolio"
 #define MyAppExeName "Portfolio.exe"

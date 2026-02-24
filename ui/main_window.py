@@ -655,7 +655,7 @@ class MainWindow(QMainWindow):
         self.tax_strict_mode = False
         self._price_provider = YahooFinanceProvider()
 
-        self.setWindowTitle("Portfolio Control System V3.1")
+        self.setWindowTitle("Portfolio Control System 0.0.1")
         self.setMinimumSize(1100, 700)
         self.resize(1280, 800)
 

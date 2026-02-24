@@ -1,6 +1,6 @@
 [project]
 name = "portfolio"
-version = "1.0.0"
+version = "0.0.1"
 description = "Sistema de Controle de Portfólio de Investimentos"
 requires-python = ">=3.11"
 authors = [

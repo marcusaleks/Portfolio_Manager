@@ -130,7 +130,7 @@ class InstitutionModel(Base):
 # Engine and session factory
 # ---------------------------------------------------------------------------
 
-_DB_DIR = os.path.join(os.path.expanduser("~"), ".portfolio_v3")
+_DB_DIR = os.path.join(os.path.expanduser("~"), ".portfolio_v0.0.1")
 _DB_PATH = os.path.join(_DB_DIR, "portfolio.db")
 
 

@@ -66,19 +66,30 @@ Portfólio é um sistema desktop para controle e acompanhamento de investimentos
 | ETFs | BOVA11, IVVB11 |
 | Renda Fixa | Tesouro, CDB |
 
-## 🚀 Instalação
+## 🚀 Instalação e Distribuição
 
-### Opção 1: Instalador Windows (Recomendado)
-1. Baixe o instalador na [página de Releases](https://github.com/marcusaleks/portfolio/releases)
-2. Execute `PortfolioSetup_v1.0.0.exe`
-3. Siga o assistente de instalação
+### Instalador Gerado
+O instalador Windows foi gerado com sucesso e está localizado em:
+`Output\PortfolioSetup_v0.0.1.exe`
 
-### Opção 2: Executar a partir do código-fonte
+### Segurança e Configuração
+As ferramentas utilizadas (**Git** e **Inno Setup**) são padrão da indústria e seguras para uso local. Nenhuma configuração especial de segurança é necessária.
+
+**Recomendação (Opcional):**
+Configure sua identidade no Git para que seus commits sejam identificados corretamente:
 ```bash
-# Clone o repositório
-git clone https://github.com/marcusaleks/portfolio.git
-cd portfolio
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+```
 
+### Publicar no GitHub
+Para enviar este projeto para o seu GitHub:
+1. Crie um novo repositório vazio no GitHub
+2. Execute o script `final_push.bat`
+3. Faça login no navegador quando solicitado
+
+### Executar a partir do código-fonte
+```bash
 # Crie um ambiente virtual
 python -m venv .venv
 .venv\Scripts\activate
@@ -135,6 +146,37 @@ portfolio/
 │   └── report_export.py    # PDF e CSV
 └── tests/                  # Testes automatizados
 ```
+
+## 👩‍💻 Guia para Colaboradores (Desenvolvimento)
+
+Se você convidou desenvolvedores para o projeto, eles devem seguir estes passos para configurar o ambiente local:
+
+### 1. Clonar o Repositório
+```bash
+git clone https://github.com/marcusaleks/Portfolio_Manager.git
+cd Portfolio_Manager
+```
+
+### 2. Configurar Ambiente Virtual
+Recomendado para isolar as dependências do projeto:
+```bash
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# Linux/Mac:
+source .venv/bin/activate
+```
+
+### 3. Instalar Dependências
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Executar o Sistema
+```bash
+python main.py
+```
+> **Nota:** O banco de dados (`portfolio.db`) é criado localmente na primeira execução. Cada desenvolvedor terá seu próprio banco de dados vazio (ou você pode compartilhar um backup).
 
 ## 📄 Licença
 
