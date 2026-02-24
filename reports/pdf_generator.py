@@ -147,7 +147,7 @@ class PdfReportGenerator:
             alignment=1,  # center
         )
         story.append(Paragraph(
-            "Portfolio Control System V3.1 — Gerado automaticamente", footer_style
+            "Portfolio Control System 0.0.1 — Gerado automaticamente", footer_style
         ))
 
         doc.build(story)

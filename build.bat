@@ -1,6 +1,6 @@
 @echo off
 echo ============================================
-echo   Portfólio V.1.0 - Build Script
+echo   Portfólio V.0.0.1 - Build Script
 echo ============================================
 echo.
 
@@ -20,6 +20,6 @@ echo Para criar o instalador:
 echo   1. Instale o Inno Setup: https://jrsoftware.org/isdl.php
 echo   2. Abra installer.iss no Inno Setup
 echo   3. Compile (Ctrl+F9)
-echo   4. O instalador será gerado em Output\PortfolioSetup_v1.0.0.exe
+echo   4. O instalador será gerado em Output\PortfolioSetup_v0.0.1.exe
 echo.
 pause

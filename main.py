@@ -1,4 +1,4 @@
-"""Portfolio Control System V3.1 — Entry Point."""
+"""Portfolio Control System 0.0.1 — Entry Point."""
 
 from __future__ import annotations
 
