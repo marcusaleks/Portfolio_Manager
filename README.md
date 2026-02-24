@@ -1,4 +1,4 @@
-# 💰 Portfólio V.1.0
+# 💰 Portfólio V.0.0.1
 
 **Sistema de Controle de Portfólio de Investimentos**
 
